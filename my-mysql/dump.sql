@@ -30,7 +30,7 @@ CREATE TABLE `customers` (
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -59,7 +59,7 @@ CREATE TABLE `orders` (
   PRIMARY KEY (`id`),
   KEY `customer_id` (`customer_id`),
   CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -68,7 +68,7 @@ CREATE TABLE `orders` (
 
 LOCK TABLES `orders` WRITE;
 /*!40000 ALTER TABLE `orders` DISABLE KEYS */;
-INSERT INTO `orders` VALUES (1,1,'2026-10-01',1500.00,'paid'),(2,1,'2026-10-05',2300.50,'paid'),(3,2,'2026-10-03',800.00,'paid'),(4,3,'2026-10-07',4200.00,'paid'),(5,3,'2026-10-10',1100.00,'cancelled'),(7,1,'2026-10-01',1500.00,'paid'),(8,1,'2026-10-05',2300.50,'paid'),(9,2,'2026-10-03',800.00,'new'),(10,3,'2026-10-07',4200.00,'paid'),(11,3,'2026-10-10',1100.00,'cancelled'),(12,4,'2026-10-12',950.00,'new');
+INSERT INTO `orders` VALUES (1,1,'2026-10-01',1500.00,'paid'),(2,1,'2026-10-05',2300.50,'paid'),(3,2,'2026-10-03',800.00,'paid'),(4,3,'2026-10-07',4200.00,'paid'),(5,3,'2026-10-10',1100.00,'cancelled'),(7,1,'2026-10-01',1500.00,'paid'),(8,1,'2026-10-05',2300.50,'paid'),(9,2,'2026-10-03',800.00,'new'),(10,3,'2026-10-07',4200.00,'paid'),(11,3,'2026-10-10',1100.00,'cancelled'),(12,4,'2026-10-12',950.00,'new'),(13,1,'2026-10-01',1500.00,'paid'),(14,1,'2026-10-05',2300.50,'paid'),(15,2,'2026-10-03',800.00,'new'),(16,3,'2026-10-07',4200.00,'paid'),(17,3,'2026-10-10',1100.00,'cancelled'),(18,4,'2026-10-12',950.00,'new');
 /*!40000 ALTER TABLE `orders` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -81,4 +81,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-11-03  7:12:25
+-- Dump completed on 2026-11-03  7:33:34
